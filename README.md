@@ -1,6 +1,7 @@
 # Hackaton Fundacion Esplai
 
 >Login Backend Challenge
+>CodeFactor: Code Quality A (100%)
 
 ## Description
 
