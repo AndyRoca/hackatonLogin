@@ -1,0 +1,24 @@
+spring:
+# We define the data source
+  datasource:
+    url: jdbc:mysql://localhost:3306/login_db
+    username: root
+    password: 2409
+      
+# It instructs the application that Hibernate will be responsible for
+# creating/updating tables in the database based on JPA entities 
+  jpa:
+    hibernate:
+      ddl-auto: create
+    # With these properties, we can see the queries internally launched
+    # by JPA in the Spring Boot startup console. This way, if an error occurs,
+    # it will be easier to identify/solve.
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: false
+        # It allows us to establish the relationship that the application
+        #has with lazy loading outside of a transaction. If we set it to true,
+        #Hibernate (JPA works with Hibernate internally) will be able to perform
+        #lazy loading outside of transactions, eliminating that error.
+        enable_lazy_load_no_trans: true
